@@ -44,3 +44,11 @@ body {
     animation-fill-mode: forwards;
     animation-delay: 0;
 }
+
+::selection {
+    background: #d60000;
+}
+
+::-moz-selection {
+    background: #ffb7b7;
+}
