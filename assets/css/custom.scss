@@ -1,0 +1,28 @@
+$main-font: monospace;
+$dark-color: #000;
+$light-color: #fff;
+
+body {
+    background: $dark-color;
+}
+
+.personal_info {
+    position: absolute;
+    bottom: 4rem;
+    left: 4rem;
+    width: 20vw;
+    .name {
+        color: $light-color;
+        font-size: 0.8rem;
+        font-family: $main-font;
+        font-weight: lighter;
+        letter-spacing: 1px;
+    }
+    .description {
+        color: $light-color;
+        font-family: $main-font;
+        margin-top: .1rem;
+        font-weight: lighter;
+        font-size: 1.25rem;
+    }
+}
