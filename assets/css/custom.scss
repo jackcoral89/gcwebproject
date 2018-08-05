@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700');
-$main-font: 'Overpass Mono',
-monospace;
-;
+$main-font: 'Overpass Mono', monospace;
+// $main-font: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+
 $dark-color: #000;
 $light-color: #fff;
 body {
@@ -10,7 +10,7 @@ body {
 
 .personal_info {
     position: absolute;
-    bottom: 4rem;
+    bottom: 1rem;
     left: 4rem;
     width: 20vw;
     .name {
@@ -46,9 +46,44 @@ body {
 }
 
 ::selection {
-    background: #d60000;
+    background: #00ff0d;
 }
 
 ::-moz-selection {
-    background: #ffb7b7;
+    background: #00ff0d;
+}
+
+.c-cursor {
+    display: inline-block;
+    opacity: 0;
+    animation: cursor 1s infinite;
+    font-weight: normal;
+
+    &:after {
+        content: "|";
+    }
+
+    &--terminal {
+        &:after {
+            content: "_";
+        }
+    }
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
