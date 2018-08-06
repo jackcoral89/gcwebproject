@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/custom.min.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <title>Giacomo Corallini - Developer</title>
 </head>
-<body>
-    
-<div class="container">
-    <img src="./assets/img/MOSHED-2018-8-4-19-15-33.gif" alt="jack">
-</div>
 
-    <div class="personal_info">
-        <h4 class="name">root@giacomocorallini:~# <span class="c-cursor"></span></h4>
-        <hr size="1">
-        <h4 class="description">frontend developer</h4>
+<body>
+
+    <div class="main-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div id="strips-control" class="audio_strips">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 personal_info">
+                    <h4 class="name">root@giacomocorallini:~# frontend developer
+                        <span class="custom_cursor"></span>
+                    </h4>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <audio autoplay>
-        <source src="./assets/audio/soundtrack.mp3" type="audio/mpeg">
+
+
+
+    <audio id="bg_audio" autoplay="autoplay">
+        <source src="./assets/audio/01.mp3" type="audio/mpeg">
     </audio>
     <script src="./src/js/custom.js"></script>
 </body>
+
 </html>

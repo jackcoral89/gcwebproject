@@ -1,31 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700');
-$main-font: 'Overpass Mono', monospace;
-// $main-font: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "audio_strips";
+@import "custom_cursor";
 
 $dark-color: #000;
 $light-color: #fff;
+$main-font: 'Overpass Mono', monospace;
+
 body {
     background: $dark-color;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    height: 100%;
 }
 
 .personal_info {
     position: absolute;
-    bottom: 1rem;
-    left: 4rem;
-    width: 20vw;
+    bottom: 2rem;
+    left: 3rem;
     .name {
         color: $light-color;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-family: $main-font;
         font-weight: lighter;
         letter-spacing: 1px;
-    }
-    .description {
-        color: $light-color;
-        font-family: $main-font;
-        margin-top: .1rem;
-        font-weight: lighter;
-        font-size: 1.25rem;
     }
 }
 
@@ -51,39 +53,4 @@ body {
 
 ::-moz-selection {
     background: #00ff0d;
-}
-
-.c-cursor {
-    display: inline-block;
-    opacity: 0;
-    animation: cursor 1s infinite;
-    font-weight: normal;
-
-    &:after {
-        content: "|";
-    }
-
-    &--terminal {
-        &:after {
-            content: "_";
-        }
-    }
-}
-
-@keyframes cursor {
-    0% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
 }

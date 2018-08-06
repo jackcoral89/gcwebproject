@@ -1,0 +1,101 @@
+.audio_strips {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+}
+
+.audio_strips:hover {
+    cursor: pointer;
+}
+
+.rest_audio {
+    animation: restAudio 2s ease-in forwards;
+}
+
+.up_audio {
+    animation: upAudio 2s ease-in forwards;
+}
+
+.audio_strips ul {
+    margin: 0;
+    list-style: none;
+    width: 90px;
+    position: relative;
+    padding: 0;
+    height: 10px;
+}
+
+.audio_strips ul li {
+    position: absolute;
+    width: 1px;
+    height: 0;
+    background-color: #fff;
+    bottom: 0;
+}
+
+@keyframes restAudio {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes upAudio {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sequence1 {
+    0% {
+        height: 4px;
+    }
+    50% {
+        height: 12px;
+    }
+    100% {
+        height: 4px;
+    }
+}
+
+@keyframes sequence2 {
+    0% {
+        height: 2px;
+    }
+    50% {
+        height: 14px;
+    }
+    100% {
+        height: 2px;
+    }
+}
+
+.audio_strips li:nth-child(1) {
+    left: 0;
+    animation: sequence1 1.8s ease infinite 0;
+}
+
+.audio_strips li:nth-child(2) {
+    left: 6px;
+    animation: sequence2 1.8s ease infinite 1s;
+}
+
+.audio_strips li:nth-child(3) {
+    left: 12px;
+    animation: sequence1 1.8s ease-in-out infinite 0.7s;
+}
+
+.audio_strips li:nth-child(4) {
+    left: 18px;
+    animation: sequence2 1.8s ease-in infinite 0.8s;
+}
+
+.audio_strips li:nth-child(5) {
+    left: 24px;
+    animation: sequence1 1.8s ease-in-out infinite 0.6s;
+}
