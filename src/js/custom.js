@@ -3,7 +3,7 @@ const changeCssClass = document.getElementById('strips-control');
 audio.volume = 1;
 document.getElementById('strips-control')
     .addEventListener('click', function changeAudio() {
-        
+
         if (audio.volume) {
             $('#bg_audio').animate({
                 volume: 0
