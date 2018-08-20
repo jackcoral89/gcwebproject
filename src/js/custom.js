@@ -1,6 +1,8 @@
 const audio = document.getElementById('bg_audio');
+
 const changeCssClass = document.getElementById('strips-control');
 audio.volume = 1;
+// https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#webaudio
 document.getElementById('strips-control')
     .addEventListener('click', function changeAudio() {
 
