@@ -5,14 +5,17 @@
 
 $dark-color: #000;
 $light-color: #fff;
-$main-font: 'Overpass Mono', monospace;
+$main-font: 'Overpass Mono',
+monospace;
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-body {
+body,
+html {
     background: $dark-color;
     height: 100%;
-    margin: 0;
+    width: 100%;
+    margin: 0
 }
 
 .row.personal_info {
@@ -60,13 +63,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
 // MEDIA QUERY
 
 @media screen and (max-width: 667px) {
@@ -74,12 +70,25 @@ body {
         position: absolute;
         bottom: 1rem;
         left: 1rem;
+    }
 
-    }
     .name {
-        font-size: 0.67rem !important;
+        font-size: .67rem;
     }
+
     div.audio_strips {
         display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .personal_info {
+        position: absolute;
+        bottom: .5rem;
+        left: .5rem;
+    }
+
+    .name {
+        font-size: 0.5rem !important;
     }
 }
