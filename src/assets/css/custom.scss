@@ -1,98 +1,61 @@
-@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700');
+$main-font: "Kanit", sans-serif;
+$second-font: 'IBM Plex Mono', monospace;
+$h1: 3rem;
+$p: .8rem;
 
-@import "audio_strips";
-@import "custom_cursor";
+.bold {
+    font-weight: 600;
+}
 
-$dark-color: #000;
-$light-color: #fff;
-$main-font: 'Overpass Mono',
-monospace;
-
-@import "../../../node_modules/bootstrap/scss/bootstrap";
+h1 {
+    font-family: $main-font;
+    margin: 0;
+    font-size: $h1;
+}
+p {
+    font-family: $second-font;
+    margin: 0;
+    font-size: $p;
+}
 
 body,
 html {
-    background: $dark-color;
-    height: 100%;
-    width: 100%;
-    margin: 0
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
-a {
-    color: #dc3545;
-}
-
-.row.personal_info {
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-
-    .name {
-        color: $light-color;
-        font-size: 1rem;
-        font-family: $main-font;
-        font-weight: lighter;
-        letter-spacing: 1px;
-        opacity: 0;
-        animation: root_giacomocorallini ease-in 4s;
-        animation-fill-mode: forwards;
-        animation-delay: 0;
+.main {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 4rem;
+  .hello-emo {
+    &::after {
+      content: "🙎‍♂️";
+      --emoji: "🙋‍♂️";
+      animation: twoFrames 3s infinite;
     }
+  }
+  .glass {
+    &::after {
+      content: "🤓";
+      --emoji: "😎";
+      animation: twoFrames 2s infinite;
+    }
+  }
 }
 
-
-@keyframes root_giacomocorallini {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+@keyframes twoFrames {
+  50% {
+    content: var(--emoji);
+  }
 }
-
-/* .personal_info {
-    opacity: 0;
-    animation: root_giacomocorallini ease-in 4s;
-    animation-fill-mode: forwards;
-    animation-delay: 0;
-} */
 
 ::selection {
-    background: #00ff0d;
+  background: #00ff0d;
 }
 
 ::-moz-selection {
-    background: #00ff0d;
-}
-
-
-// MEDIA QUERY
-
-@media screen and (max-width: 667px) {
-    .personal_info {
-        position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-    }
-
-    .name {
-        font-size: .67rem;
-    }
-
-    div.audio_strips {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .personal_info {
-        position: absolute;
-        bottom: .5rem;
-        left: .5rem;
-    }
-
-    .name {
-        font-size: 0.5rem !important;
-    }
+  background: #00ff0d;
 }
