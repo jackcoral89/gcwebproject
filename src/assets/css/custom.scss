@@ -95,15 +95,15 @@ html {
   }
   .hello-emo {
     &::after {
-      content: "🙎‍♂️";
-      --emoji: "🙋‍♂️";
+      content: "🙋‍♂️";
+      --emoji: "🙎‍♂️";
       animation: twoFrames 3s infinite;
     }
   }
   .glass {
     &::after {
-      content: "🤓";
-      --emoji: "😎";
+      content: "😎";
+      --emoji: "🤓";
       animation: twoFrames 2s infinite;
     }
   }
