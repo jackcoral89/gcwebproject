@@ -29,7 +29,7 @@ h1 {
   margin-bottom: 18px;
   @media (max-width: $sm) {
     h1 {
-        font-size: 2.5rem;
+      font-size: 2.5rem;
     }
   }
 }
@@ -93,20 +93,20 @@ html {
       display: none;
     }
   }
-  .hello-emo {
+  .hello {
     &::after {
       content: "🙋‍♂️";
-      --emoji: "🙎‍♂️";
-      animation: twoFrames 3s infinite;
+      animation: hello 3s infinite;
+      -webkit-animation: hello 3s infinite;
     }
   }
-  .glass {
-    &::after {
-      content: "😎";
-      --emoji: "🤓";
-      animation: twoFrames 2s infinite;
+    .glass {
+      &::after {
+        content: "😎";
+        animation: glass 2s infinite;
+        -webkit-animation: glass 2s infinite;
+      }
     }
-  }
   .social {
     padding: 1rem 0;
     a {
@@ -115,9 +115,21 @@ html {
   }
 }
 
-@keyframes twoFrames {
-  50% {
-    content: var(--emoji);
+@keyframes hello {
+  0% {
+    content: "🙋‍♂️";
+  }
+  100% {
+    content: "🙎‍♂️";
+  }
+}
+
+@keyframes glass {
+  0% {
+    content: "🤓";
+  }
+  100% {
+    content: "😎";
   }
 }
 
