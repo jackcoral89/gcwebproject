@@ -4,11 +4,15 @@ $base: #58a6ff;
 $angular: #c3002f;
 $github: #8b949e;
 $linkedin: #0a66c2;
-$medium: #0BE370;
+$medium: #0be370;
 
 // Font
 $second-font: "IBM Plex Mono", monospace;
 $main-font: "Kanit", sans-serif;
+
+// Breakpoints
+$sm: 576px;
+$md: 768px;
 
 $h1: 3rem;
 $p: 0.8rem;
@@ -21,7 +25,15 @@ h1 {
   font-family: $main-font;
   margin: 0;
   font-size: $h1;
+  line-height: 50px;
+  margin-bottom: 18px;
+  @media (max-width: $sm) {
+    h1 {
+        font-size: 2.5rem;
+    }
+  }
 }
+
 p,
 a {
   font-family: $second-font;
@@ -70,6 +82,17 @@ html {
   align-items: center;
   height: 100%;
   padding: 0 4rem;
+  @media (max-width: $sm) {
+    padding: 0 1rem;
+    #mobile-break {
+      display: block;
+    }
+  }
+  @media (min-width: $md) {
+    #mobile-break {
+      display: none;
+    }
+  }
   .hello-emo {
     &::after {
       content: "🙎‍♂️";
