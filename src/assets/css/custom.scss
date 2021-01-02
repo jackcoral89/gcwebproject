@@ -1,21 +1,61 @@
+// Color
+$dark: #000;
+$base: #58a6ff;
+$angular: #c3002f;
+$github: #8b949e;
+$linkedin: #0a66c2;
+$medium: #0BE370;
+
+// Font
+$second-font: "IBM Plex Mono", monospace;
 $main-font: "Kanit", sans-serif;
-$second-font: 'IBM Plex Mono', monospace;
+
 $h1: 3rem;
-$p: .8rem;
+$p: 0.8rem;
 
 .bold {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 h1 {
-    font-family: $main-font;
-    margin: 0;
-    font-size: $h1;
+  font-family: $main-font;
+  margin: 0;
+  font-size: $h1;
 }
-p {
-    font-family: $second-font;
-    margin: 0;
-    font-size: $p;
+p,
+a {
+  font-family: $second-font;
+  margin: 0;
+  font-size: $p;
+}
+
+a {
+  color: $dark;
+  &.base {
+    &:hover {
+      color: $base;
+    }
+  }
+  &.angular {
+    &:hover {
+      color: $angular;
+    }
+  }
+  &.github {
+    &:hover {
+      color: $github;
+    }
+  }
+  &.medium {
+    &:hover {
+      color: $medium;
+    }
+  }
+  &.linkedin {
+    &:hover {
+      color: $linkedin;
+    }
+  }
 }
 
 body,
@@ -42,6 +82,12 @@ html {
       content: "🤓";
       --emoji: "😎";
       animation: twoFrames 2s infinite;
+    }
+  }
+  .social {
+    padding: 1rem 0;
+    a {
+      margin-right: 10px;
     }
   }
 }
