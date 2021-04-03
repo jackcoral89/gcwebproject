@@ -6,6 +6,9 @@ $github: #8b949e;
 $linkedin: #0a66c2;
 $medium: #0be370;
 
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap");
+
 // Font
 $second-font: "IBM Plex Mono", monospace;
 $main-font: "Kanit", sans-serif;
@@ -22,11 +25,16 @@ $p: 0.8rem;
 }
 
 h1 {
+  display: flex;
+  align-items: center;
   font-family: $main-font;
   margin: 0;
   font-size: $h1;
   line-height: 50px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
+  .animoji-glass {
+    margin-left: 8px;
+  }
   @media (max-width: $sm) {
     h1 {
       font-size: 2.5rem;
@@ -93,20 +101,6 @@ html {
       display: none;
     }
   }
-  .hello {
-    &::after {
-      content: "🙋‍♂️";
-      animation: hello 3s infinite;
-      -webkit-animation: hello 3s infinite;
-    }
-  }
-    .glass {
-      &::after {
-        content: "😎";
-        animation: glass 2s infinite;
-        -webkit-animation: glass 2s infinite;
-      }
-    }
   .social {
     padding: 1rem 0;
     a {
