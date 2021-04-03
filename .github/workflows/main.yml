@@ -24,6 +24,10 @@ jobs:
           port: 21
           server-dir: giacomocorallini.com/public_html/
           exclude: .vscode
-           - .git
-           - src/assets/css/custom.scss
+            - .git*/**
+            - **/.git*/**
+            - .gitignore
+            - .github
+            - src/assets/css/custom.scss
+
 
