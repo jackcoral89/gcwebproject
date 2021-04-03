@@ -22,3 +22,9 @@ jobs:
           username: ftp@giacomocorallini.com
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
+          exclude: .git*
+          - .git*/**
+          -  **/.git*/**
+          - node_modules/**
+          - node_modules/**/*
+
