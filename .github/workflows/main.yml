@@ -23,6 +23,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           server-dir: giacomocorallini.com/public_html/
-          exclude: 
-          - .gitignore
 
