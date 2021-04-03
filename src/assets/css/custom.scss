@@ -32,9 +32,6 @@ h1 {
   font-size: $h1;
   line-height: 50px;
   margin-bottom: 10px;
-  .animoji-glass {
-    margin-left: 8px;
-  }
   @media (max-width: $sm) {
     h1 {
       font-size: 2.5rem;
@@ -106,24 +103,6 @@ html {
     a {
       margin-right: 10px;
     }
-  }
-}
-
-@keyframes hello {
-  0% {
-    content: "🙋‍♂️";
-  }
-  100% {
-    content: "🙎‍♂️";
-  }
-}
-
-@keyframes glass {
-  0% {
-    content: "🤓";
-  }
-  100% {
-    content: "😎";
   }
 }
 
