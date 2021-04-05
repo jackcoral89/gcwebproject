@@ -25,17 +25,13 @@ $p: 0.8rem;
 }
 
 h1 {
-  display: flex;
-  align-items: center;
   font-family: $main-font;
   margin: 0;
   font-size: $h1;
   line-height: 50px;
   margin-bottom: 10px;
   @media (max-width: $sm) {
-    h1 {
-      font-size: 2.5rem;
-    }
+    font-size: 2.2rem !important;
   }
 }
 
@@ -83,6 +79,22 @@ html {
 }
 
 .main {
+  .head-content-info {
+    display: flex;
+    @media (max-width: $md) {
+      display: unset !important;
+      .waving_hand,
+			.smiling_face_with_sunglasses {
+        height: 40px;
+        width: 40px;
+				margin: 4px 6px;
+      }
+    }
+  }
+  .hi-there,
+  .im-giacomo {
+    display: flex;
+  }
   display: flex;
   align-items: center;
   height: 100%;
@@ -91,11 +103,6 @@ html {
     padding: 0 1rem;
     #mobile-break {
       display: block;
-    }
-  }
-  @media (min-width: $md) {
-    #mobile-break {
-      display: none;
     }
   }
   .social {
