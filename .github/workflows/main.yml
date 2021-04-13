@@ -11,10 +11,26 @@ jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
+
     steps:
+
       - name: 🚚 Get latest code
         uses: actions/checkout@v2.3.2
 
+      - name: Make destination directory for compiled CSS
+        run: mkdir -vp /tmp/giacomocorallini/src/assets/css
+
+      # https://github.com/marketplace/actions/sass-build
+      - name: Compile CSS from SCSS files
+        uses: gha-utilities/sass-build@v0.3.7
+        with:
+          source: src/assets/css/custom.scss
+          destination: /tmp/giacomocorallini/assets/css/custom.min.css
+
+      - name: Move compiled CSS to path within pr-pages branch
+        run: mv /tmp/giacomocorallini/src/assets/css src/assets/css/
+
+      # https://github.com/marketplace/actions/ftp-deploy
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:

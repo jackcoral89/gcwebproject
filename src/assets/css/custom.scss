@@ -4,7 +4,7 @@ $base: #58a6ff;
 $angular: #c3002f;
 $github: #8b949e;
 $linkedin: #0a66c2;
-$medium: #0be370;
+$hashnode: #2A62FF;
 
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap");
@@ -59,9 +59,9 @@ a {
       color: $github;
     }
   }
-  &.medium {
+  &.hashnode {
     &:hover {
-      color: $medium;
+      color: $hashnode;
     }
   }
   &.linkedin {
