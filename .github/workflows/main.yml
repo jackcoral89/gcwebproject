@@ -25,7 +25,7 @@ jobs:
         uses: gha-utilities/sass-build@v0.3.7
         with:
           source: src/assets/css/custom.scss
-          destination: /tmp/giacomocorallini/assets/css/custom.min.css
+          destination: /tmp/giacomocorallini/src/assets/css/custom.min.css
 
       - name: Move compiled CSS to path within pr-pages branch
         run: mv /tmp/giacomocorallini/src/assets/css src/assets/css/
