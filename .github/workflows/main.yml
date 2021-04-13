@@ -25,10 +25,10 @@ jobs:
         uses: gha-utilities/sass-build@v0.3.7
         with:
           source: src/assets/css/custom.scss
-          destination: /tmp/giacomocorallini/src/assets/css/test.css
+          destination: /tmp/giacomocorallini/src/assets/css/build_custom.css
 
       - name: Move compiled CSS
-        run: mv /tmp/giacomocorallini/src/assets/css/test.css src/assets/css/
+        run: mv /tmp/giacomocorallini/src/assets/css/build_custom.css src/assets/css/
 
       # - name: Remove tmp folder
       #   run: rm /tmp/giacomocorallini/src/assets/css
