@@ -30,8 +30,8 @@ jobs:
       - name: Move compiled CSS
         run: mv /tmp/giacomocorallini/src/assets/css src/assets/css/
 
-      - name: Remove tmp folder
-        run: rm /tmp/giacomocorallini/src/assets/css/
+      # - name: Remove tmp folder
+      #   run: rm /tmp/giacomocorallini/src/assets/css
 
       # https://github.com/marketplace/actions/ftp-deploy
       - name: 📂 Sync files
