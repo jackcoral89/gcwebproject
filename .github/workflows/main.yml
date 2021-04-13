@@ -27,8 +27,11 @@ jobs:
           source: src/assets/css/custom.scss
           destination: /tmp/giacomocorallini/src/assets/css/custom.min.css
 
-      - name: Move compiled CSS to path within pr-pages branch
+      - name: Move compiled CSS
         run: mv /tmp/giacomocorallini/src/assets/css src/assets/css/
+
+      - name: Remove tmp folder
+        run: rm /tmp/giacomocorallini/src/assets/css/
 
       # https://github.com/marketplace/actions/ftp-deploy
       - name: 📂 Sync files
