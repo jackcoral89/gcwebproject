@@ -1,10 +1,11 @@
 // Color
-$dark: #000;
+$light: #fff;
+$dark: rgb(17, 17, 17);
 $base: #58a6ff;
 $angular: #c3002f;
 $github: #8b949e;
 $linkedin: #0a66c2;
-$hashnode: #2A62FF;
+$hashnode: #2a62ff;
 
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap");
@@ -22,6 +23,14 @@ $p: 0.8rem;
 
 .bold {
   font-weight: 600;
+}
+
+.dark-mode-on {
+  h1,
+  p,
+  a {
+    color: $light;
+  }
 }
 
 h1 {
@@ -79,15 +88,18 @@ html {
 }
 
 .main {
+  &.dark-mode-on {
+    background-color: $dark;
+  }
   .head-content-info {
     display: flex;
     @media (max-width: $md) {
       display: unset !important;
       .waving_hand,
-			.smiling_face_with_sunglasses {
+      .smiling_face_with_sunglasses {
         height: 40px;
         width: 40px;
-				margin: 4px 6px;
+        margin: 4px 6px;
       }
     }
   }
@@ -110,6 +122,18 @@ html {
     a {
       margin-right: 10px;
     }
+  }
+
+  .toggle-dark-mode {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+		.toggle {
+			border: 0;
+			background: none;
+			cursor: pointer;
+			outline: none;
+		}
   }
 }
 
